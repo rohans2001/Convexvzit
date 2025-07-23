@@ -5,12 +5,12 @@ import org.openqa.selenium.By;
 public class SidebarPage {
 	public By visitorMenu() {
 
-		return By.xpath("//*[@id='desktop-sidebar']/li[8]");
+		return By.xpath("//*[@id='desktop-sidebar']/li[9]");
 	}
 
 	public By inviteSubmenu() {
 
-		return By.xpath("//*[@id='desktop-sidebar']/li[8]/ul/li[2]/a/span[2]");
+		return By.xpath("//*[@id='desktop-sidebar']/li[9]/ul/li[2]/a/span[2]");
 	}
 
 	public By reportMenu() {
