@@ -44,7 +44,7 @@ public class AddInvite extends BaseClass {
         wait.until(ExpectedConditions.presenceOfElementLocated(invitePage.addInviteButton()));
     }
 
-    @Test(priority = 2, invocationCount = 5)
+    @Test(priority = 2, invocationCount = 16)
     public void addVisitorInvite() throws InterruptedException {
         if (currentIndex >= visitorNames.size()) {
             throw new RuntimeException("No more visitor names left.");
@@ -68,11 +68,11 @@ public class AddInvite extends BaseClass {
         new Select(driver.findElement(invitePage.purposeDropdown())).selectByVisibleText("Interview");
         driver.findElement(invitePage.subjectInput()).sendKeys("Interview");
         driver.findElement(invitePage.companyNameInput()).sendKeys("Abc Company");
-        js.executeScript("arguments[0].value='2025-07-22';", driver.findElement(invitePage.visitDateInput()));
+        js.executeScript("arguments[0].value='2025-08-04';", driver.findElement(invitePage.visitDateInput()));
 
         driver.findElement(invitePage.hostSelectBox()).click();
         WebElement hostSearch = wait.until(ExpectedConditions.elementToBeClickable(invitePage.hostSearchInput()));
-        hostSearch.sendKeys("Supratim");
+        hostSearch.sendKeys("Rohan");
         Thread.sleep(1000);
         hostSearch.sendKeys(Keys.ENTER);
 

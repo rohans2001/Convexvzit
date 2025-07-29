@@ -21,7 +21,7 @@ public class LoginHelper {
     }
 
     public void performLogin(String username, String password) {
-        driver.get("https://sentientgeeks.dev2.convexvzit.com/Account/Login");
+        driver.get("https://sundaytest.convexsol.co/Account/Login");
 
         driver.findElement(loginPage.usernameField()).sendKeys(username);
         driver.findElement(loginPage.passwordField()).sendKeys(password);

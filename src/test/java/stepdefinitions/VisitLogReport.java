@@ -13,8 +13,9 @@ import utils.LoginHelper;
 
 public class VisitLogReport extends BaseClass {
 
-	private SidebarPage sidebarPage = new SidebarPage();
-	private VisitorLogpage VisitorLogpage = new VisitorLogpage();
+	private  SidebarPage sidebarPage = new SidebarPage();
+	private  VisitorLogpage VisitorLogpage = new VisitorLogpage();
+
 
 	@Test(priority = 1)
 	public void visitReport() throws InterruptedException {
@@ -26,7 +27,7 @@ public class VisitLogReport extends BaseClass {
 		driver.findElement(sidebarPage.reportMenu()).click();
 		WebElement reportMenu = wait.until(ExpectedConditions.elementToBeClickable(sidebarPage.reportSubmenu()));
 		js.executeScript("arguments[0].click();", reportMenu);
-
+		Thread.sleep(2000);
 		driver.findElement(VisitorLogpage.visitorLogHostDropdown()).click();
 		WebElement hostSearch = wait
 				.until(ExpectedConditions.elementToBeClickable(VisitorLogpage.visitorLogHostSearchbox()));
